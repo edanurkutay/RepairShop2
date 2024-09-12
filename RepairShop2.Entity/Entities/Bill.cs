@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RepairShop2.Core.Entities;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RepairShop2.Entity.Entities
 {
-	public class Bill
+	public class Bill : EntityBase
 	{
 		[Key]
 		public int BillId { get; set; }

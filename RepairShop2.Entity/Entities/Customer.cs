@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RepairShop2.Core.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace RepairShop2.Entity.Entities
 {
-	public class Customer
+	public class Customer : EntityBase
 	{
 		[Key]
 		public int CustomerId { get; set; }

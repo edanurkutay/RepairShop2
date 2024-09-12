@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RepairShop2.Core.Entities;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RepairShop2.Entity.Entities
 {
-	public class Fault
+	public class Fault : EntityBase
 	{
 		[Key]
 		public int FaultId { get; set; }

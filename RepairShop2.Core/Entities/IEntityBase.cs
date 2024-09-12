@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RepairShop2.Data.Repositories.Abstractions
+namespace RepairShop2.Core.Entities
 {
-	internal interface IRepisitory
-	{
-	}
+    public interface IEntityBase
+    {
+    }
 }

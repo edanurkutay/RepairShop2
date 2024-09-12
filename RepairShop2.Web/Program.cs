@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using RepairShop2.Data.Context;
+using RepairShop2.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.LoadDataLayerExtension(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

@@ -33,10 +33,18 @@ namespace RepairShop2.Data.Migrations
                     b.Property<DateTime>("BillDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2024, 9, 12, 14, 23, 52, 183, DateTimeKind.Local).AddTicks(9601));
+                        .HasDefaultValue(new DateTime(2024, 9, 12, 16, 33, 54, 144, DateTimeKind.Local).AddTicks(3152));
 
                     b.Property<int>("FaultId")
                         .HasColumnType("int");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BillId");
 
@@ -74,6 +82,14 @@ namespace RepairShop2.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CustomerId");
 
                     b.ToTable("customers");
@@ -108,6 +124,14 @@ namespace RepairShop2.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(0);
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("FaultId");
 
