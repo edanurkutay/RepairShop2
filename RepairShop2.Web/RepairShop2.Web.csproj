@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RepairShop2.Data\RepairShop2.Data.csproj" />
+    <ProjectReference Include="..\RepairShop2.Service\RepairShop2.Service.csproj" />
   </ItemGroup>
 
 </Project>

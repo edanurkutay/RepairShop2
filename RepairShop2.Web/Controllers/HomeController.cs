@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RepairShop2.Service.Services.Abstractions;
 using RepairShop2.Web.Models;
 using System.Diagnostics;
 
@@ -7,15 +8,18 @@ namespace RepairShop2.Web.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly IFaultService faultService;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, IFaultService faultService)
 		{
 			_logger = logger;
+			this.faultService = faultService;
 		}
 
-		public IActionResult Index()
+		public async Task<IActionResult> Index()
 		{
-			return View();
+			var allFaults =  await faultService.GetAllFaultsAsync();
+			return View(allFaults);
 		}
 
 		public IActionResult Privacy()

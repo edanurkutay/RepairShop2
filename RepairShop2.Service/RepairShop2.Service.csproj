@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Abstractions\" />
-    <Folder Include="Services\Concrete\" />
+    <ProjectReference Include="..\RepairShop2.Data\RepairShop2.Data.csproj" />
+    <ProjectReference Include="..\RepairShop2.Entity\RepairShop2.Entity.csproj" />
   </ItemGroup>
 
 </Project>
